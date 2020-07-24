@@ -1,22 +1,21 @@
-# Akan Name Generator
-#### The Akan Name Generator is an online platform that allows a user to determine their ghananian name based on the date of birth, and their gender, 2020
-#### By **Comfort Museo**
+# Akan name Generator
+This Repository contains code for my akan name aplication.
+##### By Comfort Mwendwa
 ## Description
-{This is a detailed description of your application, including its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }
-## Setup/Installation Requirements
-* This is a great place
-* to list setup instructions
-* in a simple
-* easy-to-understand
-* format
-{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? Do I need to install any dependencies? How should I set up my databases? Is there other code this app depends on?}
-## Known Bugs
-{Are there issues that have not yet been resolved that you want to let users know you know? Outline any issues that would impact use of your application. Share any workarounds that are in place. }
+This is a Personal Project that i have created an aplication that submit your akan name also known as Ghana name. Akan names are names given to children in Ghana according to the day of the week they were born also known as the ("day names").This application is going to calculate and display using your gender and dates provided.
+## Setup Instructions
+* git clone (https://github.com/C-Museo/Akan-name-generator.git) on your terminal.
+* Navigate to the Akan folder.
+* Open the folder in your editor.
 ## Technologies Used
-*HTML
-*CSS
-*bootsrap
+* HTML
+* CSS
+* bootsrap
+#BDD
+- Enter your birthday details
+ You will input your details by typing or by clicking on the provided calender.
+ -Choose your gender either Male or Female field provided since your akan name will be outputed only when you have provided the gender and your valid dates so you need to understand that the gender section is important.
+ -The submit button is the part where your input or your details have been feed to the application and then it display or output your Akan name and the day your were born in case you forget to choose the gender or the correct date aprompt message will appear to inform you to input the correct details.
 ### License
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
-Copyright (c) 2020 **Comfort Museo**
-  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Copyright (c) 2020 **MUSEO**
