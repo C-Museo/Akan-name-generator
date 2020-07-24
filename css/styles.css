@@ -1,3 +1,12 @@
 body {
-  background-image: url ("file:///home/comfort/Downloads/ghana.png");
+  background-image: url ("ghana.png");
+}
+body {
+  float: center;
+}
+div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
 }

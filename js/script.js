@@ -1,4 +1,4 @@
-let dob = document.getElementById("birthDate")
+let dob = document.getElementById("myForm")
 function validDate() {
     let d = new Date(dob.value).getDate()
     let m = new Date(dob.value).getMonth() + 1 //getMonth() has a zero based index that's why the one is added (1-12 months)
@@ -14,7 +14,6 @@ function validDate() {
     }
   }
 
-  let dob = document.getElementById("birthDate")
 // reset fields in the form
 function clearAnswer() {
   response.innerHTML = ''
@@ -28,7 +27,7 @@ function validDate() {
   let m = new Date(dob.value).getMonth() + 1 //getMonth() has a zero based index that's why the one is added (1-12 months)
   let y = new Date(dob.value).getFullYear()
   if (d <= 0 || d > 31) {
-    alert('enter a valid day of month')
+    alert('enter a valid day of date')
   } else if (m <= 0 || m > 12) {
     alert('enter a valid month')    
   } else if (y > new Date().getFullYear() ) {
@@ -38,48 +37,52 @@ function validDate() {
   }
 }
 // find users akan name
-function assignName() {
+/*function assignName() {
   let gender = document.getElementsByName("gender")
-  let response = document.getElementById("response")
+  let birthDate = document.getElementById("birthDate")
   let weekDay = new Date(dob).getDay()
   for (let i = 0, length = gender.length; i < length; i++) {
     if (gender[i].checked) {
       if (gender[i].value == 'male') {
         if (weekDay === 0) {
-          response.innerHTML = 'Kwasi'
+          birthDate.innerHTML = 'Kwasi'
         } else if (weekDay === 1) {
-          response.innerHTML = 'Kwadwo'
+          birthDate.innerHTML = 'Kwadwo'
         } else if (weekDay === 2) {
-          response.innerHTML = 'Kwabena'
+          birthDate.innerHTML = 'Kwabena'
         } else if (weekDay === 3) {
-          response.innerHTML = 'Kwaku'
+          birthDate.innerHTML = 'Kwaku'
         } else if (weekDay === 4) {
-          response.innerHTML = 'Yaw'
+          birthDate.innerHTML = 'Yaw'
         } else if (weekDay === 5) {
-          response.innerHTML = 'Kofi'
+          birthDate.innerHTML = 'Kofi'
         } else {
-          response.innerHTML = 'Kwame'
+          birthDate.innerHTML = 'Kwame'
         }
-      } else {
-        if (weekDay === 0) {
-          response.innerHTML = 'Akosua'
+
+     /* } else {*/
+       /* if (gender[2].checked) {
+        if (gender[2].value == 'female') {
+        }if (weekDay === 0)      
+          birthDate.innerHTML = 'Akosua'
         } else if (weekDay === 1) {
-          response.innerHTML = 'Adwoa'
+          birthDate.innerHTML = 'Adwoa'
         } else if (weekDay === 2) {
-          response.innerHTML = 'Abenaa'
+          birthDate.innerHTML = 'Abenaa'
         } else if (weekDay === 3) {
-          response.innerHTML = 'Akua'
+          birthDate.innerHTML = 'Akua'
         } else if (weekDay === 4) {
-          response.innerHTML = 'Yaa'
+          birthDate.innerHTML = 'Yaa'
         } else if (weekDay === 5) {
-          response.innerHTML = 'Afua'
+          birthDate.innerHTML = 'Afua'
+        } else if (weekday === 6) {
         } else {
-          response.innerHTML = 'Ama'
+          birthDate.innerHTML ='Ama'
         }
       }
     }
   }
-  event.preventDefault();
+  event.preventDefault();*/
 }
 
 
@@ -117,7 +120,7 @@ function assignName() {
         return false;
     } else {
         document.setYear(year);
-    }
+    }*/
 
     var day= d.getDate();
 var day= ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
@@ -129,7 +132,7 @@ function akanName () {
     var isfemale = Document.getElementById("male").checked; 
     
 }
-akanName()*/
+akanName()
 
 
 
