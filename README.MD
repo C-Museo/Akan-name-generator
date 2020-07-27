@@ -10,7 +10,7 @@ This is a Personal Project that i have created an aplication that submit your ak
 ## Technologies Used
 * HTML
 * CSS
-* bootsrap
+* JavaScript
 #BDD
 - Enter your birthday details
  You will input your details by typing or by clicking on the provided calender.

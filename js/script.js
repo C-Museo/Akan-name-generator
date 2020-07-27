@@ -1,102 +1,5 @@
-let dob = document.getElementById("myForm")
-function validDate() {
-    let d = new Date(dob.value).getDate()
-    let m = new Date(dob.value).getMonth() + 1 //getMonth() has a zero based index that's why the one is added (1-12 months)
-    let y = new Date(dob.value).getFullYear()
-    if (d <= 0 || d > 31) {
-      alert('enter a valid day of month')
-    } else if (m <= 0 || m > 12) {
-      alert('enter a valid month')    
-    } else if (y > new Date().getFullYear() ) {
-      alert("enter a valid year")
-    } else {
-      assignName()
-    }
-  }
-
-// reset fields in the form
-function clearAnswer() {
-  response.innerHTML = ''
-}
-function akanName(e) {
-  validDate()
-}
-// validate date input
-function validDate() {
-  let d = new Date(dob.value).getDate()
-  let m = new Date(dob.value).getMonth() + 1 //getMonth() has a zero based index that's why the one is added (1-12 months)
-  let y = new Date(dob.value).getFullYear()
-  if (d <= 0 || d > 31) {
-    alert('enter a valid day of date')
-  } else if (m <= 0 || m > 12) {
-    alert('enter a valid month')    
-  } else if (y > new Date().getFullYear() ) {
-    alert("enter a valid year")
-  } else {
-    assignName()
-  }
-}
-// find users akan name
-/*function assignName() {
-  let gender = document.getElementsByName("gender")
-  let birthDate = document.getElementById("birthDate")
-  let weekDay = new Date(dob).getDay()
-  for (let i = 0, length = gender.length; i < length; i++) {
-    if (gender[i].checked) {
-      if (gender[i].value == 'male') {
-        if (weekDay === 0) {
-          birthDate.innerHTML = 'Kwasi'
-        } else if (weekDay === 1) {
-          birthDate.innerHTML = 'Kwadwo'
-        } else if (weekDay === 2) {
-          birthDate.innerHTML = 'Kwabena'
-        } else if (weekDay === 3) {
-          birthDate.innerHTML = 'Kwaku'
-        } else if (weekDay === 4) {
-          birthDate.innerHTML = 'Yaw'
-        } else if (weekDay === 5) {
-          birthDate.innerHTML = 'Kofi'
-        } else {
-          birthDate.innerHTML = 'Kwame'
-        }
-
-     /* } else {*/
-       /* if (gender[2].checked) {
-        if (gender[2].value == 'female') {
-        }if (weekDay === 0)      
-          birthDate.innerHTML = 'Akosua'
-        } else if (weekDay === 1) {
-          birthDate.innerHTML = 'Adwoa'
-        } else if (weekDay === 2) {
-          birthDate.innerHTML = 'Abenaa'
-        } else if (weekDay === 3) {
-          birthDate.innerHTML = 'Akua'
-        } else if (weekDay === 4) {
-          birthDate.innerHTML = 'Yaa'
-        } else if (weekDay === 5) {
-          birthDate.innerHTML = 'Afua'
-        } else if (weekday === 6) {
-        } else {
-          birthDate.innerHTML ='Ama'
-        }
-      }
-    }
-  }
-  event.preventDefault();*/
-}
-
-
-
-
-
-
-
-
-
-
-/*function getDate () {
-    var dd= new Date();
-
+function getDate () {
+    /*var dd= new Date();*/
     var  day = parseInt(document.getElementById("day").value);
     var  month = parseInt(document.getElementById("month").value);
     var  year = parseInt(document.getElementById("year").value);
@@ -115,14 +18,16 @@ function validDate() {
         document.setMonth(month);
     }
 
-    if(year <=0 || year >new Date().getFullYear(){
-        document.getElementsByClassName("year error").innerHtml = "invalid";
+    if(year <=0 || year >new Date().getFullYear() {
+      document.getElementsByClassName("year error").innerHtml = "invalid";
         return false;
     } else {
         document.setYear(year);
-    }*/
+    }
 
-    var day= d.getDate();
+    var day= d.getDate(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7
+
+    );
 var day= ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 var male =["kwasi", "kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame"]
 var female= ["akosua", "adwoa", "abenaa", "akua", "yaa", "afua", "ama"]
@@ -130,6 +35,47 @@ var female= ["akosua", "adwoa", "abenaa", "akua", "yaa", "afua", "ama"]
 function akanName () {
     var ismale = Document.getElementById("male").checked;
     var isfemale = Document.getElementById("male").checked; 
+    if (gender[1].checked) {
+      if (gender[1].value == 'male') {
+        if (weekDay === 0) {
+          response.innerHTML = 'Kwasi'
+        } else if (weekDay === 1) {
+          response.innerHTML = 'Kwadwo'
+        } else if (weekDay === 2) {
+          response.innerHTML = 'Kwabena'
+        } else if (weekDay === 3) {
+          response.innerHTML = 'Kwaku'
+        } else if (weekDay === 4) {
+          response.innerHTML = 'Yaw'
+        } else if (weekDay === 5) {
+          response.innerHTML = 'Kofi'
+        } else {
+          response.innerHTML = 'Kwame'
+        }
+      } else {if (gender[2].checked) {
+        if (gender[2].value == 'female') {
+
+        if (weekDay === 0) {
+          response.innerHTML = 'Akosua'
+        } else if (weekDay === 1) {
+          response.innerHTML = 'Adwoa'
+        } else if (weekDay === 2) {
+          response.innerHTML = 'Abenaa'
+        } else if (weekDay === 3) {
+          response.innerHTML = 'Akua'
+        } else if (weekDay === 4) {
+          response.innerHTML = 'Yaa'
+        } else if (weekDay === 5) {
+          response.innerHTML = 'Afua'
+        } else {
+          response.innerHTML = 'Ama'
+        }
+      }
+    }
+  }
+  event.preventDefault();
+}
+
     
 }
 akanName()
