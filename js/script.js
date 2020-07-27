@@ -1,84 +1,135 @@
-function getDate () {
-    /*var dd= new Date();*/
-    var  day = parseInt(document.getElementById("day").value);
-    var  month = parseInt(document.getElementById("month").value);
-    var  year = parseInt(document.getElementById("year").value);
-    
-    if(day <=0 || day>31) {
-        document.getElementsByClassName("day error").innerHtml = "invalid";
-        return false;
+
+function generate()
+{
+    var  day = document.getElementById("day").value;
+    var  month = document.getElementById("month").value;
+    var  year = document.getElementById("year").value;
+    if(day!="" || month !=""||year !="")
+    {
+    if(day <1|| day>31) {
+      var err=document.getElementById("result"); 
+      err.innerHTML = "Invalid day!";
+      err.style.color="red";
+       // return false;
+    } 
+
+    else if(month <1|| month>12) {
+        
+        var err=document.getElementById("result"); 
+        err.innerHTML = "Invalid Month";
+        err.style.color="red";
+        //return false;
     } else {
-        document.setDate(date);
-    }
+        const str = ""+year; 
+        var CC = str.slice(2);
+        var YY= str.substring(0,2);
+        var MM=month;
+        var DD=day;
+        
+        var dow= ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
+        var num=Math.floor(dow);
 
-    if(month <=0 || month>12) {
-        document.getElementsByClassName("month error").innerHtml = "invalid";
-        return false;
-    } else {
-        document.setMonth(month);
-    }
-
-    if(year <=0 || year >new Date().getFullYear() {
-      document.getElementsByClassName("year error").innerHtml = "invalid";
-        return false;
-    } else {
-        document.setYear(year);
-    }
-
-    var day= d.getDate(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7
-
-    );
-var day= ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-var male =["kwasi", "kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame"]
-var female= ["akosua", "adwoa", "abenaa", "akua", "yaa", "afua", "ama"]
-
-function akanName () {
-    var ismale = Document.getElementById("male").checked;
-    var isfemale = Document.getElementById("male").checked; 
-    if (gender[1].checked) {
-      if (gender[1].value == 'male') {
-        if (weekDay === 0) {
-          response.innerHTML = 'Kwasi'
-        } else if (weekDay === 1) {
-          response.innerHTML = 'Kwadwo'
-        } else if (weekDay === 2) {
-          response.innerHTML = 'Kwabena'
-        } else if (weekDay === 3) {
-          response.innerHTML = 'Kwaku'
-        } else if (weekDay === 4) {
-          response.innerHTML = 'Yaw'
-        } else if (weekDay === 5) {
-          response.innerHTML = 'Kofi'
-        } else {
-          response.innerHTML = 'Kwame'
+        var ismale = document.getElementById("male").checked;
+        var isfemale = document.getElementById("female").checked; 
+        if(ismale==true)
+        {
+         if(num==0)   
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Kwasi!";
+          err.style.color="green";
+         }
+         else if(num==1)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Kwadwo";
+          err.style.color="green";
+         }
+         else if(num==2)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Kwabena";
+          err.style.color="green";
+         }
+         else if(num==3)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Kwaku!";
+          err.style.color="green";
+         }
+         else if(num==4)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Yaw";
+          err.style.color="green";
+         }
+         else if(num==5)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Kofi!";
+          err.style.color="green";
+         }
+         else if(num==6)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Kwame!";
+          err.style.color="green";
+         }
         }
-      } else {if (gender[2].checked) {
-        if (gender[2].value == 'female') {
-
-        if (weekDay === 0) {
-          response.innerHTML = 'Akosua'
-        } else if (weekDay === 1) {
-          response.innerHTML = 'Adwoa'
-        } else if (weekDay === 2) {
-          response.innerHTML = 'Abenaa'
-        } else if (weekDay === 3) {
-          response.innerHTML = 'Akua'
-        } else if (weekDay === 4) {
-          response.innerHTML = 'Yaa'
-        } else if (weekDay === 5) {
-          response.innerHTML = 'Afua'
-        } else {
-          response.innerHTML = 'Ama'
+        else if(isfemale)
+        {
+         if(num==0)   
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Akosua!";
+          err.style.color="green";
+         }
+         else if(num==1)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Adwoa";
+          err.style.color="green";
+         }
+         else if(num==2)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Abenaa!";
+          err.style.color="green";
+         }
+         else if(num==3)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Akua";
+          err.style.color="green";
+         }
+         else if(num==4)
+         {
+          var err=document.getElementById("result"); 
+          err.innerHTML = "Hello Yaa!";
+          err.style.color="green";
+         }
+         else if(num==5)
+         {
+          var err=document.getElementById("result"); 
+            err.innerHTML = "Hello Afua!";
+            err.style.color="green";
+         }
+         else if(num==6)
+         {
+           
+            var err=document.getElementById("result"); 
+            err.innerHTML = "Hello Ama!";
+            err.style.color="green";
+         }
         }
-      }
+        
     }
   }
-  event.preventDefault();
-}
-
+  else
+  {
+    var err=document.getElementById("result"); 
+    err.innerHTML = "Fill all fields please!";
+    err.style.color="red";
+  }
     
 }
-akanName()
-
-
-
